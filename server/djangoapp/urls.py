@@ -6,14 +6,8 @@ from . import views
 app_name = 'djangoapp'
 
 urlpatterns = [
-
-    # registration
     path(route='register', view=views.registration, name='register'),
-
-    # login
     path(route='login', view=views.login_user, name='login'),
-
-    # logout
     path(route='logout', view=views.logout_user, name='logout'),
-
+    path(route='get_cars', view=views.get_cars, name='getcars'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
